@@ -1,4 +1,4 @@
-framework module Pods_Argment {
+module Pods_Argment {
   umbrella header "Pods-Argment-umbrella.h"
 
   export *

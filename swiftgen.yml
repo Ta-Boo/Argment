@@ -1,0 +1,17 @@
+strings:
+  inputs: Argment/
+  outputs:
+    - templateName: structured-swift4
+      output: Argment/Resources/Generated/Strings+Localization.swift
+ib:
+  inputs: Argment/
+  outputs:
+    - templateName: scenes-swift4
+      output: Argment/Resources/Generated/StoryboardScenes.swift
+
+xcassets:
+  inputs: Argment/
+  outputs:
+    - templateName: swift4
+      output: Argment/Resources/Generated/AssetsImages.swift
+

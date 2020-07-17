@@ -24,7 +24,6 @@ extension ARView: ARCoachingOverlayViewDelegate{
 final class MyArView: ARView {
     var detectionCompletedClosure: (() -> Void)?
     func coachingOverlayViewDidDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
-//        super.coachingOverlayViewDidDeactivate(coachingOverlayView)
         detectionCompletedClosure?()
     }
 }
