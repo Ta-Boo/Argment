@@ -21,5 +21,6 @@ class ViewController: UIViewController {
         
         // Add the box anchor to the scene
         arView.scene.anchors.append(boxAnchor)
+//        arView.scene.addAnchor(<#T##anchor: HasAnchoring##HasAnchoring#>)
     }
 }

@@ -1,0 +1,176 @@
+Version 1.18.0 (2020-06)
+===========================
+## Breaking & behavioral changes
+None.
+
+## New APIs and capabilities
+None.
+
+## Deprecations
+None.
+
+## Other changes
+None.
+
+## Bug fixes
+  * Fixed a broken privacy link in the ([`CloudAnchorExample`](https://github.com/google-ar/arcore-ios-sdk/tree/master/Examples/CloudAnchorExample)) app.
+
+Version 1.17.0 (2020-05-19)
+===========================
+## Breaking & behavioral changes
+None.
+
+## New APIs and capabilities
+None.
+
+## Deprecations
+None.
+
+## Other changes
+  * The binary size of the Cloud Anchors SDK has significantly decreased.
+  * Bitcode is now supported for Augmented Faces. (Bitcode was already supported for Cloud Anchors.)
+
+## Bug fixes
+  * Various bug fixes and performance improvements.
+
+Version 1.16.0 (2020-03-19)
+===========================
+## Breaking & behavioral changes
+None.
+
+## New APIs and capabilities
+None.
+
+## Deprecations
+None.
+
+## Other changes
+None.
+
+## Bug fixes
+  * Various bug fixes and performance improvements.
+
+Version 1.15.0 (2020-02-06)
+===========================
+## Breaking & behavioral changes
+None.
+
+## New APIs and capabilities
+None.
+
+## Deprecations
+None.
+
+## Other changes
+Raised the required minimum iOS SDK version to 13.0.
+
+## Bug fixes
+  * Various bug fixes and performance improvements.
+
+Version 1.14.0 (2019-12-12)
+===========================
+## Breaking & behavioral changes
+  * Removed the Cloud Anchor example from the SDK, so `pod try` will no longer work on the ARCore CocoaPod. It is still available under `Examples` on the GitHub repository.
+
+## New APIs and capabilities
+None.
+
+## Deprecations
+None.
+
+## Other changes
+None.
+
+## Bug fixes
+  * Various bug fixes and performance improvements.
+
+Version 1.13.0 (2019-10)
+===========================
+Decreased the minimum deployment target of `AugmentedFaces` to iOS 9.0 (from 10.0).
+
+Bug fixes and performance improvements.
+
+Version 1.12.0 (2019-09-12)
+===========================
+  * The ARCore CocoaPod has been divided into two subspecs, `CloudAnchors` and `AugmentedFaces`. `AugmentedFaces` is new for this release. (These libraries are not yet designed to work together.)
+
+  * The `AugmentedFaces` subspec allows you to implement ARCore's Augmented Faces feature on iOS. To read more about Augmented Faces, see https://developers.google.com/ar/develop/ios/augmented-faces/overview
+
+  * The Cloud Anchors feature has changed as follows.
+    * The data captured by `hostCloudAnchor:error:` and uploaded to the ARCore Cloud Anchor API service has changed. See https://developers.google.com/ar/develop/ios/cloud-anchors/overview#how-hosted to learn more.
+    * `resolveCloudAnchorWithIdentifier:error:` will no longer time out or fail when the ARCore Cloud Anchor API service is unreachable or the anchor cannot be immediately resolved. Instead, the API continues to attempt to resolve the provided anchors until they are removed.
+      * The `ErrorResolvingLocalizationNoMatch` and `ErrorServiceUnavailable` enums in `GARCloudAnchorState` are now deprecated and will no longer be returned. For hosted anchors only, the new value `ErrorHostingServiceUnavailable` may be returned.
+    * Cloud Anchors is now supported on all ARKit-compatible devices. New devices will be supported immediately with this release.
+
+
+Version 1.11.0 (2019-08-05)
+===========================
+Increased the minimum deployment target to iOS 9.0 (from iOS 8.0).
+
+Bug fixes and performance improvements.
+  * Added support for devices:
+    * iPod Touch (7th gen).
+
+Version 1.10.0 (2019-06-20)
+===========================
+Bug fixes and performance improvements.
+
+Version 1.9.0 (2019-05-06)
+===========================
+Bug fixes and performance improvements.
+  * Added support for devices:
+    * iPad Mini (5th gen).
+    * iPad Air (3rd gen).
+
+Version 1.8.0 (2019-03-28)
+===========================
+ARCore is now robust to tracking resets.
+
+Version 1.7.0 (2019-02-14)
+==========================
+Bug fixes and performance improvements.
+
+Version 1.6.0 (2018-12-06)
+==========================
+Added the ability to target iOS versions prior to 11.0. The binary now contains
+32-bit architectures, and the README documents three version numbers: minimum
+deployment target, minimum base SDK, and minimum version for runtime support.
+  * Added support for devices:
+    * iPhone: XS, XS Max, XR.
+    * iPad Pro: 11 inch, 12.9 inch (3rd gen).
+
+Version 1.5.0 (2018-09-27)
+==========================
+Added the ability for new devices to be supported without an SDK update.
+
+Resolved Issues:
+  * Fixed an issue where ARCore would not compile if used with Firebase Firestore.
+
+Version 1.4.0 (2018-08-02)
+==========================
+Resolved Issues:
+  * Fixed an issue where hosting and resolving Cloud Anchors would fail on iOS 12 with the new 4:3 aspect ratio.
+  * Fixed an issue where ARCore would not compile if used with Firebase Messaging.
+
+Version 1.3.0 (2018-06-21)
+==========================
+Adds support for ARKit-compatible iPads. These include:
+  * iPad: 5th and 6th generation
+  * iPad Pro: 12.9 inch (1st and 2nd gen), 10.5 inch, 9.7 inch
+
+Resolved Issues:
+  * Fixed an issue where an invalid API key for the ARCore Cloud Anchor Service would result in a cloud anchor state of `GARCloudAnchorStateErrorInternal`. The error state will now be `GARCloudAnchorStateErrorNotAuthorized`.
+
+Version 1.2.1 (2018-05-30)
+==========================
+Resolved Issues:
+  * Removed SDK references to `ARFaceAnchor`. The `hostCloudAnchor:` implementation no longer checks that the passed in `ARAnchor` is not an `ARFaceAnchor`, and no longer forcibly exits with `GARSessionErrorCodeAnchorNotSupportedForHosting`. However, use of `ARFaceAnchor`s remains unsupported in this release.
+
+Version 1.2.0 (2018-05-08)
+==========================
+Initial release alongside ARCore 1.2 on Android.
+  * Support for Cloud Anchors.
+  * Supported devices: iPhone X, 8, 8+, 7, 7+, 6S, 6S+, SE.
+
+Known Issues:
+  * An invalid API key for the ARCore Cloud Anchor Service will result in a Cloud Anchor state of `GARCloudAnchorStateErrorInternal` instead of `GARCloudAnchorStateErrorNotAuthorized`. This is a known issue and will be fixed in an upcoming release.
