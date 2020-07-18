@@ -16,13 +16,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYC-Kw-ZWA" customClass="MyArView" customModule="Argment" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyp-wf-H3a">
+                                <rect key="frame" x="379" y="64" width="15" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="zYC-Kw-ZWA" firstAttribute="leading" secondItem="U2f-nu-gZY" secondAttribute="leading" id="0vS-1E-sEF"/>
-                            <constraint firstItem="zYC-Kw-ZWA" firstAttribute="top" secondItem="U2f-nu-gZY" secondAttribute="top" id="5a7-0v-yk6"/>
+                            <constraint firstItem="zYC-Kw-ZWA" firstAttribute="top" secondItem="fdd-o1-CEp" secondAttribute="top" id="5a7-0v-yk6"/>
+                            <constraint firstItem="U2f-nu-gZY" firstAttribute="trailing" secondItem="Pyp-wf-H3a" secondAttribute="trailing" constant="20" id="SLp-xN-Krq"/>
+                            <constraint firstItem="Pyp-wf-H3a" firstAttribute="top" secondItem="U2f-nu-gZY" secondAttribute="top" constant="20" id="UhW-u3-Dco"/>
                             <constraint firstItem="U2f-nu-gZY" firstAttribute="bottom" secondItem="zYC-Kw-ZWA" secondAttribute="bottom" id="iNr-gO-N5C"/>
                             <constraint firstItem="U2f-nu-gZY" firstAttribute="trailing" secondItem="zYC-Kw-ZWA" secondAttribute="trailing" id="jIG-vS-xLS"/>
                         </constraints>
@@ -30,6 +38,7 @@
                     </view>
                     <connections>
                         <outlet property="arView" destination="zYC-Kw-ZWA" id="imL-hV-fey"/>
+                        <outlet property="countdown" destination="Pyp-wf-H3a" id="P8b-nV-BrB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4a-v9-ECW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

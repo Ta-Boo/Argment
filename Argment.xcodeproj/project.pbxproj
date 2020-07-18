@@ -16,6 +16,9 @@
 		B3AE5B7C24C1D374007D4D48 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE5B7A24C1D374007D4D48 /* StoryboardScenes.swift */; };
 		B3AE5B7F24C1E950007D4D48 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE5B7E24C1E950007D4D48 /* StatsViewController.swift */; };
 		B3AE5B8124C1E974007D4D48 /* Stats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AE5B8024C1E974007D4D48 /* Stats.storyboard */; };
+		B3B5C0F424C260420073406F /* AssetsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0F324C260420073406F /* AssetsImages.swift */; };
+		B3B5C0F624C2F0300073406F /* ArViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0F524C2F0300073406F /* ArViewModel.swift */; };
+		B3B5C0F824C2F7700073406F /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0F724C2F7700073406F /* Rx.swift */; };
 		B3C3565B24BF73D000ADF909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3565A24BF73D000ADF909 /* AppDelegate.swift */; };
 		B3C3565F24BF73D000ADF909 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B3C3565E24BF73D000ADF909 /* Experience.rcproject */; };
 		B3C3566424BF73D200ADF909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C3566324BF73D200ADF909 /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 		B3AE5B7A24C1D374007D4D48 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
 		B3AE5B7E24C1E950007D4D48 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		B3AE5B8024C1E974007D4D48 /* Stats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stats.storyboard; sourceTree = "<group>"; };
+		B3B5C0F324C260420073406F /* AssetsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsImages.swift; sourceTree = "<group>"; };
+		B3B5C0F524C2F0300073406F /* ArViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArViewModel.swift; sourceTree = "<group>"; };
+		B3B5C0F724C2F7700073406F /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
 		B3C3565724BF73D000ADF909 /* Argment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Argment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C3565A24BF73D000ADF909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3C3565E24BF73D000ADF909 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 			children = (
 				B3C3568C24BF7EF900ADF909 /* ArFragment.storyboard */,
 				B3C3568E24BF7F6F00ADF909 /* ArViewController.swift */,
+				B3B5C0F524C2F0300073406F /* ArViewModel.swift */,
 			);
 			path = Ar;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 		B3AE5B7824C1D30B007D4D48 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				B3B5C0F324C260420073406F /* AssetsImages.swift */,
 				B3AE5B7A24C1D374007D4D48 /* StoryboardScenes.swift */,
 				B3AE5B7924C1D374007D4D48 /* Strings+Localization.swift */,
 			);
@@ -250,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				B3C3569124BF82B600ADF909 /* ARView.swift */,
+				B3B5C0F724C2F7700073406F /* Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -419,7 +428,10 @@
 				B3AE5B7C24C1D374007D4D48 /* StoryboardScenes.swift in Sources */,
 				B3AE5B6D24C1C319007D4D48 /* AppState.swift in Sources */,
 				B3AE5B7B24C1D374007D4D48 /* Strings+Localization.swift in Sources */,
+				B3B5C0F424C260420073406F /* AssetsImages.swift in Sources */,
 				B3AE5B7624C1CB3F007D4D48 /* MainTabBarController.swift in Sources */,
+				B3B5C0F824C2F7700073406F /* Rx.swift in Sources */,
+				B3B5C0F624C2F0300073406F /* ArViewModel.swift in Sources */,
 				B3C3565B24BF73D000ADF909 /* AppDelegate.swift in Sources */,
 				B3C3565F24BF73D000ADF909 /* Experience.rcproject in Sources */,
 				B3AE5B7F24C1E950007D4D48 /* StatsViewController.swift in Sources */,

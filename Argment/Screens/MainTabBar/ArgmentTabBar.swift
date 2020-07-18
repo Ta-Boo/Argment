@@ -42,7 +42,7 @@ class ArgmentTabBar: UITabBar {
     
     func createPath() -> CGPath {
         let buttonSize: CGFloat = 64
-        let depth: CGFloat = buttonSize + 12
+        let depth: CGFloat = buttonSize / 2 + 12
         let path = UIBezierPath()
         let centerWidth = self.frame.width / 2
         

@@ -37,22 +37,32 @@ class CustomBox: Entity, HasModel, HasAnchoring, HasCollision {
 class ArViewController: UIViewController {
     
 
-        @IBOutlet var arView: MyArView!
-
+    @IBOutlet var arView: MyArView!
+    @IBOutlet weak var countdown: UILabel!
+    
+    let viewModel = ArViewModel()
+    
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Load the "Box" scene from the "Experience" Reality File
-//        arView.Holder.detectionCompleted
+        countdown.isHidden = true
         let boxAnchor = try! Experience.loadBox()
-               let box = MeshResource.generateBox(size: 0.3) // size in metres
-               let material = SimpleMaterial(color: .lightGray, isMetallic: true)
-               let entity = ModelEntity(mesh: box, materials: [material])
-               let anchor = AnchorEntity(plane: .horizontal)
-               anchor.addChild(entity)
+        arView.scene.addAnchor(boxAnchor)
         arView.detectionCompletedClosure = { [weak self] in
-            self?.arView.scene.addAnchor(boxAnchor)
+            self?.setupCountdown()
         }
         arView.addCoaching()
+    }
+    
+    func setupCountdown() {
+        let time = 9
+        countdown.isHidden = false
+        viewModel.timer = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+            .map { time in
+                "\(10 - (time + 1)) s" }
+            .bind(to: countdown.rx.text)
+            .dispose(by: viewModel.disposeBag)
     }
 }

@@ -15,6 +15,7 @@ extension ARView: ARCoachingOverlayViewDelegate{
         coachingOverlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         coachingOverlay.center = CGPoint(x: frame.size.width  / 2,
                                          y: frame.size.height / 2)
+        coachingOverlay.setActive(true, animated: true)
         
         coachingOverlay.goal = .anyPlane
         self.addSubview(coachingOverlay)
