@@ -11,7 +11,7 @@ import UIKit
 
 enum TabItem: String {
     case stats = "stats"
-    case game = "game"
+    case animal = "animal"
     case settings = "settings"
     case info = "info"
     
@@ -19,8 +19,8 @@ enum TabItem: String {
         switch self {
         case .stats:
             return StoryboardScene.Stats.initialScene.instantiate()
-        case .game:
-            return StoryboardScene.ArFragment.initialScene.instantiate()
+        case .animal:
+            return StoryboardScene.Stats.initialScene.instantiate()
         case .settings:
             return StoryboardScene.Stats.initialScene.instantiate()
         case .info:
@@ -34,8 +34,8 @@ enum TabItem: String {
     
     var image: UIImage {
         switch self {
-        case .game:
-            return Asset.camera.image
+        case .animal:
+            return Asset.animal.image
         case .stats:
             return Asset.stats.image
         case .settings:
@@ -49,8 +49,9 @@ enum TabItem: String {
 }
 
 class MainTabBarController: UITabBarController {
-
-    let tabItems: [TabItem] = [.stats, .info, .info, .settings]
+    
+    let tabItems: [TabItem] = [.stats, .animal, .info, .settings]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
@@ -76,7 +77,6 @@ class MainTabBarController: UITabBarController {
             button.heightAnchor.constraint(equalToConstant: 64)
         ])
         button.setImage(Asset.camera.image.withTintColor(#colorLiteral(red: 0.9210000038, green: 0.9210000038, blue: 0.9210000038, alpha: 1)), for: .normal)
-//        button.image(for: .normal)?.colo = #colorLiteral(red: 0.9210000038, green: 0.9210000038, blue: 0.9210000038, alpha: 1)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
     
@@ -88,7 +88,7 @@ class MainTabBarController: UITabBarController {
     func setupTabs() {
         let controllers: [UIViewController] = tabItems.map({ item in
             let controller = item.viewController
-            controller.tabBarItem = UITabBarItem(title: item.title, image: item.image , selectedImage: nil)
+            controller.tabBarItem = UITabBarItem(title: "", image: item.image , selectedImage: nil)
             return controller
         })
         self.viewControllers = controllers
@@ -97,8 +97,7 @@ class MainTabBarController: UITabBarController {
             let direction: CGFloat = (index > (controllers.count / 2) - 1) ? 1 : -1
             let offset: CGFloat = ((0...1).contains(controllers.count / 2 - index)) ? 20 : 0
             item.titlePositionAdjustment = UIOffset(horizontal: direction * offset, vertical: 0)
-            self.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
-
+            //            item.imageInsets = UIEdgeInsets(top: -16, left: -16, bottom: 16, right: 16)
         }
     }
 }
