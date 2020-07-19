@@ -57,6 +57,15 @@ class MainTabBarController: UITabBarController {
         setupTabBar()
         setupButton()
         setupTabs()
+        setupStatusBar()
+    }
+    
+    func setupStatusBar() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.backgroundColor = .clear
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.5410000086, blue: 0.8470000029, alpha: 1)
     }
     
     func setupTabBar(){

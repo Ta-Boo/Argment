@@ -18,7 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+//        setAppearence()
         return true
+    }
+    
+    func setAppearence() {
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().isTranslucent = true
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 1, green: 0.5410000086, blue: 0.8470000029, alpha: 1)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
