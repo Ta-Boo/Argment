@@ -1,8 +1,3 @@
-strings:
-  inputs: Argment/
-  outputs:
-    - templateName: structured-swift4
-      output: Argment/Resources/Generated/Strings+Localization.swift
 ib:
   inputs: Argment/
   outputs:
@@ -12,6 +7,6 @@ ib:
 xcassets:
   inputs: Argment/
   outputs:
-    - templateName: swift4
-      output: Argment/Resources/Generated/AssetsImages.swift
+  - templatePath: xcassets.stencil
+    output: Argment/Resources/Generated/UIImage+Assets.swift
 

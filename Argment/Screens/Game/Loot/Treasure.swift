@@ -44,11 +44,11 @@ struct Treasure {
         get {
             switch rarity {
             case .common:
-                return Asset.foodCommon.image
+                return UIImage.foodCommon!
             case .rare:
-                return Asset.foodRare.image
+                return UIImage.foodRare!
             case .legendary:
-                return Asset.foodLegendary.image
+                return UIImage.foodLegendary!
             }
         }
     }

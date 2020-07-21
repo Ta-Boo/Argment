@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7631BF40E7EDCA9D6CFD9C45 /* libPods-Argment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F41D9D329EE6E9EC2F21965 /* libPods-Argment.a */; };
 		B3290E4B24C76EFD0094161A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3290E4A24C76EFD0094161A /* GoogleService-Info.plist */; };
+		B3290E4D24C7901D0094161A /* UIImage+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3290E4C24C7901D0094161A /* UIImage+Assets.swift */; };
 		B388C37B24C4F4BD002F0B66 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B388C37A24C4F4BD002F0B66 /* UIControl.swift */; };
 		B388C37D24C6263D002F0B66 /* SSYBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B388C37C24C6263D002F0B66 /* SSYBox.swift */; };
 		B388C38224C64A84002F0B66 /* ChestModel.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B388C38124C64A84002F0B66 /* ChestModel.rcproject */; };
@@ -16,11 +17,9 @@
 		B3AE5B7224C1C38C007D4D48 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AE5B7124C1C38C007D4D48 /* MainTabBar.storyboard */; };
 		B3AE5B7424C1C3DC007D4D48 /* ArgmentTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE5B7324C1C3DC007D4D48 /* ArgmentTabBar.swift */; };
 		B3AE5B7624C1CB3F007D4D48 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE5B7524C1CB3F007D4D48 /* MainTabBarController.swift */; };
-		B3AE5B7B24C1D374007D4D48 /* Strings+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE5B7924C1D374007D4D48 /* Strings+Localization.swift */; };
 		B3AE5B7C24C1D374007D4D48 /* StoryboardScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE5B7A24C1D374007D4D48 /* StoryboardScenes.swift */; };
 		B3AE5B7F24C1E950007D4D48 /* LootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE5B7E24C1E950007D4D48 /* LootViewController.swift */; };
 		B3AE5B8124C1E974007D4D48 /* Stats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AE5B8024C1E974007D4D48 /* Stats.storyboard */; };
-		B3B5C0F424C260420073406F /* AssetsImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0F324C260420073406F /* AssetsImages.swift */; };
 		B3B5C0F624C2F0300073406F /* ArViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0F524C2F0300073406F /* ArViewModel.swift */; };
 		B3B5C0F824C2F7700073406F /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0F724C2F7700073406F /* Rx.swift */; };
 		B3B5C0FA24C3A8900073406F /* Treasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0F924C3A8900073406F /* Treasure.swift */; };
@@ -58,6 +57,7 @@
 		9199DCF9C2B407158364AAFE /* Pods-Argment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Argment.release.xcconfig"; path = "Target Support Files/Pods-Argment/Pods-Argment.release.xcconfig"; sourceTree = "<group>"; };
 		B2AC6EECD837088602F39D76 /* Pods-Argment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Argment.debug.xcconfig"; path = "Target Support Files/Pods-Argment/Pods-Argment.debug.xcconfig"; sourceTree = "<group>"; };
 		B3290E4A24C76EFD0094161A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B3290E4C24C7901D0094161A /* UIImage+Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Assets.swift"; sourceTree = "<group>"; };
 		B388C37A24C4F4BD002F0B66 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		B388C37C24C6263D002F0B66 /* SSYBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSYBox.swift; sourceTree = "<group>"; };
 		B388C38124C64A84002F0B66 /* ChestModel.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = ChestModel.rcproject; sourceTree = "<group>"; };
@@ -65,11 +65,9 @@
 		B3AE5B7124C1C38C007D4D48 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		B3AE5B7324C1C3DC007D4D48 /* ArgmentTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgmentTabBar.swift; sourceTree = "<group>"; };
 		B3AE5B7524C1CB3F007D4D48 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		B3AE5B7924C1D374007D4D48 /* Strings+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Localization.swift"; sourceTree = "<group>"; };
 		B3AE5B7A24C1D374007D4D48 /* StoryboardScenes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardScenes.swift; sourceTree = "<group>"; };
 		B3AE5B7E24C1E950007D4D48 /* LootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootViewController.swift; sourceTree = "<group>"; };
 		B3AE5B8024C1E974007D4D48 /* Stats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stats.storyboard; sourceTree = "<group>"; };
-		B3B5C0F324C260420073406F /* AssetsImages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsImages.swift; sourceTree = "<group>"; };
 		B3B5C0F524C2F0300073406F /* ArViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArViewModel.swift; sourceTree = "<group>"; };
 		B3B5C0F724C2F7700073406F /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
 		B3B5C0F924C3A8900073406F /* Treasure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treasure.swift; sourceTree = "<group>"; };
@@ -212,9 +210,8 @@
 		B3AE5B7824C1D30B007D4D48 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				B3B5C0F324C260420073406F /* AssetsImages.swift */,
+				B3290E4C24C7901D0094161A /* UIImage+Assets.swift */,
 				B3AE5B7A24C1D374007D4D48 /* StoryboardScenes.swift */,
-				B3AE5B7924C1D374007D4D48 /* Strings+Localization.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -461,8 +458,6 @@
 				B388C38224C64A84002F0B66 /* ChestModel.rcproject in Sources */,
 				B3AE5B7C24C1D374007D4D48 /* StoryboardScenes.swift in Sources */,
 				B3AE5B6D24C1C319007D4D48 /* AppState.swift in Sources */,
-				B3AE5B7B24C1D374007D4D48 /* Strings+Localization.swift in Sources */,
-				B3B5C0F424C260420073406F /* AssetsImages.swift in Sources */,
 				B3B5C0FA24C3A8900073406F /* Treasure.swift in Sources */,
 				B3AE5B7624C1CB3F007D4D48 /* MainTabBarController.swift in Sources */,
 				B3B5C10024C3B1BB0073406F /* TreasureCell.swift in Sources */,
@@ -471,6 +466,7 @@
 				B3B5C0FC24C3AE510073406F /* StatsViewModel.swift in Sources */,
 				B3C3565B24BF73D000ADF909 /* AppDelegate.swift in Sources */,
 				B3AE5B7F24C1E950007D4D48 /* LootViewController.swift in Sources */,
+				B3290E4D24C7901D0094161A /* UIImage+Assets.swift in Sources */,
 				B3C3568F24BF7F6F00ADF909 /* ArViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

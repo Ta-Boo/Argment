@@ -50,19 +50,19 @@ class ArgmentTabBar: UITabBar {
         path.addLine(to: CGPoint(x: (centerWidth - buttonSize * 0.86), y: 0))
         
         // direction: down
-        path.addCurve(to: CGPoint(x: centerWidth - (buttonSize * 0.63), y: (buttonSize * 0.22)),
+        path.addCurve(to: CGPoint(x: centerWidth - (buttonSize * 0.64), y: (buttonSize * 0.22)),
                       controlPoint1: CGPoint(x: (centerWidth - (buttonSize * 0.71)), y: 0),
-                      controlPoint2: CGPoint(x: (centerWidth - (buttonSize * 0.63)), y: buttonSize * 0.12))
+                      controlPoint2: CGPoint(x: (centerWidth - (buttonSize * 0.64)), y: buttonSize * 0.12))
         path.addCurve(to: CGPoint(x: centerWidth, y: depth),
-                      controlPoint1: CGPoint(x: centerWidth - (buttonSize * 0.63), y: buttonSize * 0.46),
+                      controlPoint1: CGPoint(x: centerWidth - (buttonSize * 0.64), y: buttonSize * 0.46),
                       controlPoint2: CGPoint(x: (centerWidth - (buttonSize * 0.4)), y: depth))
         
         // direction: up
-        path.addCurve(to: CGPoint(x: centerWidth + (buttonSize * 0.63), y: (buttonSize * 0.22)),
+        path.addCurve(to: CGPoint(x: centerWidth + (buttonSize * 0.64), y: (buttonSize * 0.22)),
                       controlPoint1: CGPoint(x: (centerWidth + (buttonSize * 0.4)), y: depth),
-                      controlPoint2: CGPoint(x: centerWidth + (buttonSize * 0.63), y: buttonSize * 0.46))
+                      controlPoint2: CGPoint(x: centerWidth + (buttonSize * 0.64), y: buttonSize * 0.46))
         path.addCurve(to: CGPoint(x: (centerWidth + buttonSize * 0.86), y: 0),
-                      controlPoint1: CGPoint(x: (centerWidth + (buttonSize * 0.63)), y: buttonSize * 0.12),
+                      controlPoint1: CGPoint(x: (centerWidth + (buttonSize * 0.64)), y: buttonSize * 0.12),
                       controlPoint2: CGPoint(x: (centerWidth + (buttonSize * 0.71)), y: 0))
         
         
