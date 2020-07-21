@@ -10,9 +10,10 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class StatsViewModel{
+class LootViewModel{
     let disposeBag = DisposeBag()
-    let items = PublishSubject<[Treasure]>()
+//    let items = PublishSubject<[Treasure]>()
+    let items: BehaviorRelay<[Treasure]> = BehaviorRelay(value: [])
     
     func fetchData() {
         let data = [
@@ -26,7 +27,8 @@ class StatsViewModel{
             Treasure(rarity: .legendary),
             Treasure(rarity: .common),
         ]
-        items.onNext(data)
-        items.onCompleted()
+        items.accept(data)
+//        items.onNext(data)
+//        items.onCompldaeted()
     }
 }

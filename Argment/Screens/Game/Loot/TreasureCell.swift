@@ -62,7 +62,9 @@ class TreasureCell: UITableViewCell {
             nameLabel.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 24),
             nameLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -24),
             nameLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 6),
-            nameLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -6)
+            nameLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -6),
+    
+            contentView.heightAnchor.constraint(equalToConstant: 132)
         ])
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40))
         contentView.backgroundColor = .clear

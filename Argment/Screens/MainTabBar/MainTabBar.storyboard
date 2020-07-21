@@ -11,6 +11,7 @@
             <objects>
                 <tabBarController id="qDE-JO-d9j" customClass="MainTabBarController" customModule="Argment" customModuleProvider="target" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Re-cM-Q8I" customClass="ArgmentTabBar" customModule="Argment" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

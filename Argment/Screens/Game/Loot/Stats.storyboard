@@ -8,23 +8,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Stats View Controller-->
+        <!--Loot View Controller-->
         <scene sceneID="SJH-mG-hmE">
             <objects>
-                <viewController storyboardIdentifier="StatsViewController" id="PWg-5R-USs" customClass="StatsViewController" customModule="Argment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LootViewController" id="PWg-5R-USs" customClass="LootViewController" customModule="Argment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t4Y-7v-pUD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r7A-GY-Rja">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="300"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="r7A-GY-Rja" firstAttribute="top" secondItem="idR-SN-JbM" secondAttribute="top" id="B1Q-1N-Yet"/>
+                            <constraint firstItem="r7A-GY-Rja" firstAttribute="top" secondItem="t4Y-7v-pUD" secondAttribute="top" id="B1Q-1N-Yet"/>
                             <constraint firstItem="idR-SN-JbM" firstAttribute="trailing" secondItem="r7A-GY-Rja" secondAttribute="trailing" id="IGk-8v-KaY"/>
                             <constraint firstItem="r7A-GY-Rja" firstAttribute="leading" secondItem="idR-SN-JbM" secondAttribute="leading" id="OLc-kC-Cwx"/>
                             <constraint firstAttribute="bottom" secondItem="r7A-GY-Rja" secondAttribute="bottom" id="SB8-XX-svS"/>
@@ -42,7 +42,7 @@
     </scenes>
     <resources>
         <namedColor name="Background">
-            <color red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.26100000739097595" green="0.26100000739097595" blue="0.26100000739097595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

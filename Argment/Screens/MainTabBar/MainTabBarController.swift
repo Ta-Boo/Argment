@@ -13,18 +13,24 @@ enum TabItem: String {
     case stats = "stats"
     case animal = "animal"
     case settings = "settings"
-    case info = "info"
+    case loot = "info"
     
     var viewController: UIViewController {
         switch self {
         case .stats:
-            return StoryboardScene.Stats.initialScene.instantiate()
+            let controller = UIViewController()
+            controller.view.backgroundColor = #colorLiteral(red: 0, green: 0.9909999967, blue: 1, alpha: 1)
+            return controller
         case .animal:
-            return StoryboardScene.Stats.initialScene.instantiate()
+            let controller = UIViewController()
+            controller.view.backgroundColor = #colorLiteral(red: 0.5559999943, green: 0.9789999723, blue: 0, alpha: 1)
+            return controller
         case .settings:
-            return StoryboardScene.Stats.initialScene.instantiate()
-        case .info:
-            return StoryboardScene.Stats.initialScene.instantiate()
+            let controller = UIViewController()
+            controller.view.backgroundColor = #colorLiteral(red: 0.5809999704, green: 0.1289999932, blue: 0.5749999881, alpha: 1)
+            return controller
+        case .loot:
+           return StoryboardScene.Stats.initialScene.instantiate()
         }
     }
     
@@ -40,8 +46,8 @@ enum TabItem: String {
             return Asset.stats.image
         case .settings:
             return Asset.settings.image
-        case .info:
-            return Asset.info.image
+        case .loot:
+            return Asset.treasure.image
         }
     }
     
@@ -50,18 +56,18 @@ enum TabItem: String {
 
 class MainTabBarController: UITabBarController {
     
-    let tabItems: [TabItem] = [.stats, .animal, .info, .settings]
+    let tabItems: [TabItem] = [.stats, .animal, .loot, .settings]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
         setupButton()
         setupTabs()
-        setupStatusBar()
+//        setupStatusBar()
     }
     
     func setupStatusBar() {
-        navigationController
+        
         navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController!.navigationBar.shadowImage = UIImage()
         navigationController!.navigationBar.backgroundColor = .clear
@@ -87,13 +93,10 @@ class MainTabBarController: UITabBarController {
             button.heightAnchor.constraint(equalToConstant: 64)
         ])
         button.setImage(Asset.camera.image.withTintColor(#colorLiteral(red: 0.9210000038, green: 0.9210000038, blue: 0.9210000038, alpha: 1)), for: .normal)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        button.onTapped { [weak self] _ in
+            self?.present(StoryboardScene.ArFragment.initialScene.instantiate(), animated: true)
+        }
     }
-    
-    @objc func buttonAction(sender: UIButton!) {
-        present(StoryboardScene.ArFragment.initialScene.instantiate(), animated: true)
-    }
-    
     
     func setupTabs() {
         let controllers: [UIViewController] = tabItems.map({ item in

@@ -11,14 +11,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class StatsViewController: UIViewController {
+class LootViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let viewModel = StatsViewModel()
+    let btn = UIButton()
+    
+    let viewModel = LootViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rx.setDelegate(self).disposed(by: viewModel.disposeBag)
+//        tableView.rx.setDelegate(self).disposed(by: viewModel.disposeBag)
         bindTableView()
     }
     
@@ -28,15 +30,12 @@ class StatsViewController: UIViewController {
             cell.load(data: item)
         }.disposed(by: viewModel.disposeBag)
         
+        tableView.rx.modelSelected(Treasure.self).subscribe(onNext: { [weak self] item in
+            let alert = UIAlertController(title: "Open chest", message: item.description, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            self?.present(alert, animated: true)
+        }).disposed(by: viewModel.disposeBag)
+        
         viewModel.fetchData()
     }
-    
-}
-
-extension StatsViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
-    
 }

@@ -32,9 +32,9 @@ internal enum StoryboardScene {
   internal enum Stats: StoryboardType {
     internal static let storyboardName = "Stats"
 
-    internal static let initialScene = InitialSceneType<StatsViewController>(storyboard: Stats.self)
+    internal static let initialScene = InitialSceneType<LootViewController>(storyboard: Stats.self)
 
-    internal static let statsViewController = SceneType<StatsViewController>(storyboard: Stats.self, identifier: "StatsViewController")
+    internal static let lootViewController = SceneType<LootViewController>(storyboard: Stats.self, identifier: "LootViewController")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
