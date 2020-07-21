@@ -41,20 +41,32 @@ class ArgmentTabBar: UITabBar {
     }
     
     func createPath() -> CGPath {
-        let buttonSize: CGFloat = 64
-        let depth: CGFloat = buttonSize / 2 + 12
+        let buttonSize: CGFloat = 56
+        let depth: CGFloat = buttonSize * 0.8
         let path = UIBezierPath()
         let centerWidth = self.frame.width / 2
         
         path.move(to: CGPoint(x: 0, y: 0))
-        path.addLine(to: CGPoint(x: (centerWidth - buttonSize * 0.86), y: 0)) 
+        path.addLine(to: CGPoint(x: (centerWidth - buttonSize * 0.86), y: 0))
         
+        // direction: down
+        path.addCurve(to: CGPoint(x: centerWidth - (buttonSize * 0.63), y: (buttonSize * 0.22)),
+                      controlPoint1: CGPoint(x: (centerWidth - (buttonSize * 0.71)), y: 0),
+                      controlPoint2: CGPoint(x: (centerWidth - (buttonSize * 0.63)), y: buttonSize * 0.12))
         path.addCurve(to: CGPoint(x: centerWidth, y: depth),
-                      controlPoint1: CGPoint(x: (centerWidth - (buttonSize * 0.5)), y: 0),
-                      controlPoint2: CGPoint(x: (centerWidth - (buttonSize * 0.6)), y: depth))
-        path.addCurve(to: CGPoint(x: (centerWidth + buttonSize * 0.825), y: 0),
-                      controlPoint1: CGPoint(x: (centerWidth + (buttonSize * 0.6)), y: depth),
-                      controlPoint2: CGPoint(x: (centerWidth + (buttonSize * 0.5)), y: 0))
+                      controlPoint1: CGPoint(x: centerWidth - (buttonSize * 0.63), y: buttonSize * 0.46),
+                      controlPoint2: CGPoint(x: (centerWidth - (buttonSize * 0.4)), y: depth))
+        
+        // direction: up
+        path.addCurve(to: CGPoint(x: centerWidth + (buttonSize * 0.63), y: (buttonSize * 0.22)),
+                      controlPoint1: CGPoint(x: (centerWidth + (buttonSize * 0.4)), y: depth),
+                      controlPoint2: CGPoint(x: centerWidth + (buttonSize * 0.63), y: buttonSize * 0.46))
+        path.addCurve(to: CGPoint(x: (centerWidth + buttonSize * 0.86), y: 0),
+                      controlPoint1: CGPoint(x: (centerWidth + (buttonSize * 0.63)), y: buttonSize * 0.12),
+                      controlPoint2: CGPoint(x: (centerWidth + (buttonSize * 0.71)), y: 0))
+        
+        
+
        
         path.addLine(to: CGPoint(x: self.frame.width, y: 0))
         path.addLine(to: CGPoint(x: self.frame.width, y: 0))

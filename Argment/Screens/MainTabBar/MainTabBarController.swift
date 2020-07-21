@@ -88,7 +88,7 @@ class MainTabBarController: UITabBarController {
         button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.centerYAnchor.constraint(equalTo: view.bottomAnchor, constant: -72),
+            button.centerYAnchor.constraint(equalTo: tabBar.topAnchor, constant: 8),
             button.widthAnchor.constraint(equalToConstant: 64),
             button.heightAnchor.constraint(equalToConstant: 64)
         ])
@@ -110,7 +110,6 @@ class MainTabBarController: UITabBarController {
             let direction: CGFloat = (index > (controllers.count / 2) - 1) ? 1 : -1
             let offset: CGFloat = ((0...1).contains(controllers.count / 2 - index)) ? 20 : 0
             item.titlePositionAdjustment = UIOffset(horizontal: direction * offset, vertical: 0)
-            //            item.imageInsets = UIEdgeInsets(top: -16, left: -16, bottom: 16, right: 16)
         }
     }
 }
