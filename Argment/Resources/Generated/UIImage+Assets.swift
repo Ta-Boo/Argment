@@ -17,10 +17,12 @@ public extension UIImage {
   static let settings = UIImage.bundledImage(with: "settings")
   static let stats = UIImage.bundledImage(with: "stats")
   static let treasure = UIImage.bundledImage(with: "treasure")
+  static let astronaut = UIImage.bundledImage(with: "astronaut")
   static let camera = UIImage.bundledImage(with: "camera")
   static let foodCommon = UIImage.bundledImage(with: "food_common")
   static let foodLegendary = UIImage.bundledImage(with: "food_legendary")
   static let foodRare = UIImage.bundledImage(with: "food_rare")
+  static let selection = UIImage.bundledImage(with: "selection")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

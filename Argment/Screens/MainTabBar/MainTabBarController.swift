@@ -19,7 +19,7 @@ enum TabItem: String {
         switch self {
         case .stats:
             let controller = UIViewController()
-            controller.view.backgroundColor = #colorLiteral(red: 0, green: 0.9909999967, blue: 1, alpha: 1)
+            controller.view.backgroundColor = UIColor.init(named: "Rare")
             return controller
         case .animal:
             let controller = UIViewController()
@@ -63,7 +63,6 @@ class MainTabBarController: UITabBarController {
         setupTabBar()
         setupButton()
         setupTabs()
-//        setupStatusBar()
     }
     
     func setupStatusBar() {
@@ -72,18 +71,18 @@ class MainTabBarController: UITabBarController {
         navigationController!.navigationBar.shadowImage = UIImage()
         navigationController!.navigationBar.backgroundColor = .clear
         navigationController!.navigationBar.isTranslucent = true
-        navigationController!.navigationBar.tintColor = UIColor.init(named: "Secondary")
+        navigationController!.navigationBar.tintColor = .secondary
     }
     
     func setupTabBar(){
-        tabBar.tintColor = UIColor.init(named: "Secondary")
-        tabBar.unselectedItemTintColor = UIColor.init(named: "Accent")
+        tabBar.tintColor = .secondary
+        tabBar.unselectedItemTintColor = .accent
     }
     
     func setupButton(){
         let button = UIButton(type: .custom)
         button.layer.cornerRadius = 32
-        button.backgroundColor = UIColor.init(named: "Secondary")
+        button.backgroundColor = .secondary
         view.insertSubview(button, aboveSubview: view)
         button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -92,7 +91,7 @@ class MainTabBarController: UITabBarController {
             button.widthAnchor.constraint(equalToConstant: 64),
             button.heightAnchor.constraint(equalToConstant: 64)
         ])
-        button.setImage(UIImage.camera!.withTintColor(#colorLiteral(red: 0.9210000038, green: 0.9210000038, blue: 0.9210000038, alpha: 1)), for: .normal)
+        button.setImage(UIImage.camera!.withTintColor(.accent), for: .normal)
         button.onTapped { [weak self] _ in
             self?.present(StoryboardScene.ArFragment.initialScene.instantiate(), animated: true)
         }

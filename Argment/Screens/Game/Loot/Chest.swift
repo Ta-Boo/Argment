@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum Rarity: String{
+enum Rarity: String, CaseIterable{
     case common = "common"
     case rare = "rare"
     case legendary = "legendary"
@@ -28,17 +28,17 @@ enum Rarity: String{
     var color: UIColor {
         switch self {
         case .common:
-            return #colorLiteral(red: 0.5563425422, green: 0.9793455005, blue: 0, alpha: 1)
+            return .common
         case .rare:
-            return #colorLiteral(red: 0, green: 0.9914394021, blue: 1, alpha: 1)
+            return .rare
         case .legendary:
-            return #colorLiteral(red: 0.5810584426, green: 0.1285524964, blue: 0.5745313764, alpha: 1)
+            return .legendary
         }
     }
     
 }
 
-struct Treasure {
+struct Chest {
     let rarity: Rarity
     var image: UIImage {
         get {

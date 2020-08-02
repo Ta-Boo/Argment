@@ -15,5 +15,13 @@ class ArViewModel {
     
     let disposeBag = DisposeBag()
     var timer: Disposable?
+    var displayTime = PublishSubject<Int>()
+    
+    let chest = Chest(rarity: Rarity.allCases.randomElement() ?? .common)
+    
+    func saveChest() {
+        let appState = AppState.shared
+        appState.loot.accept([chest] + appState.loot.value)
+    }
     
 }

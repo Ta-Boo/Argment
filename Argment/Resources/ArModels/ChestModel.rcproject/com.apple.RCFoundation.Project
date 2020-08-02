@@ -32,8 +32,8 @@
                                       "configurationBox" : {
                                         "configuration" : {
                                           "animationStyle" : "basic",
-                                          "duration" : 2,
-                                          "emphasisAnimationType" : "flip",
+                                          "duration" : 3,
+                                          "emphasisAnimationType" : "float",
                                           "iterations" : 1,
                                           "target" : [
                                             "E67B41C7-7371-44FD-BC85-874E79B1B142"
@@ -44,30 +44,6 @@
                                         }
                                       },
                                       "identifier" : "F7CE9AD6-85FF-445D-B422-162F76E5739B",
-                                      "isEnabled" : true
-                                    }
-                                  ],
-                                  "__version" : 1
-                                },
-                                {
-                                  "__content" : [
-                                    {
-                                      "configurationBox" : {
-                                        "configuration" : {
-                                          "audioType" : "play",
-                                          "filePath" : "audio:com.apple.rc.audio.sound-effects.door-fx-01\/Door%20FX%2001.caf",
-                                          "loops" : false,
-                                          "multiplePerformType" : "ignore request",
-                                          "target" : [
-                                            "E67B41C7-7371-44FD-BC85-874E79B1B142"
-                                          ],
-                                          "volume" : 0.5
-                                        },
-                                        "name" : {
-                                          "type" : "audio"
-                                        }
-                                      },
-                                      "identifier" : "0C7AAF6A-EE6E-438B-AACB-6D4DB283C7F8",
                                       "isEnabled" : true
                                     }
                                   ],
@@ -90,8 +66,46 @@
                                       "configurationBox" : {
                                         "configuration" : {
                                           "angularCoefficient" : 1,
+                                          "duration" : 0.30000001192092896,
+                                          "isTransformInitKeyPath" : true,
+                                          "linearCoefficient" : 1,
+                                          "moveEase" : "none",
+                                          "respectPhysics" : false,
+                                          "scale" : 0.004999999888241291,
+                                          "target" : [
+                                            "E67B41C7-7371-44FD-BC85-874E79B1B142"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "arguments" : "absolute",
+                                          "type" : "transform"
+                                        }
+                                      },
+                                      "identifier" : "04EF781E-752A-449C-9244-99E7648BEDC0",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "CF41503F-C017-4646-AF87-9CFE4C38E89B",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "angularCoefficient" : 1,
                                           "animationStyle" : "basic",
-                                          "buildOutAnimationType" : "none",
+                                          "buildOutAnimationType" : "scale down",
                                           "distance" : 1,
                                           "duration" : 1,
                                           "fadeOut" : true,
@@ -106,14 +120,42 @@
                                           "type" : "hide"
                                         }
                                       },
-                                      "identifier" : "962C719F-DC99-4C11-8903-B969321F2ACB",
+                                      "identifier" : "187B320E-6D68-4E33-BFE5-FBD669CED667",
                                       "isEnabled" : true
                                     }
                                   ],
                                   "__version" : 1
                                 }
                               ],
-                              "identifier" : "749A2EAB-6E18-4B86-910D-6ABD4A9271D3",
+                              "identifier" : "CEA9E528-3440-43DD-BC9F-95943A96DBB2",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        },
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "duration" : 0.5
+                                        },
+                                        "name" : {
+                                          "type" : "wait"
+                                        }
+                                      },
+                                      "identifier" : "A15A92C8-4350-46F3-A589-9C8D8E58D3C7",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "6EFA0CD7-5D70-4AB6-864B-0F3B82178D4E",
                               "isEnabled" : true
                             }
                           ],
@@ -320,21 +362,21 @@
               "title" : "Scene",
               "viewTransform" : {
                 "cameraTransform" : [
-                  -0.06722162663936615,
-                  -5.9604634117249589e-08,
-                  0.99773800373077393,
+                  0.951213538646698,
+                  -5.9604644775390625e-08,
+                  -0.30853310227394104,
                   0,
-                  0.70676147937774658,
-                  0.70584750175476074,
-                  0.047617372125387192,
+                  -0.071063518524169922,
+                  0.97311317920684814,
+                  -0.21909041702747345,
                   0,
-                  -0.7042509913444519,
-                  0.70836371183395386,
-                  -0.047448273748159409,
+                  0.30023735761642456,
+                  0.23032699525356293,
+                  0.92563867568969727,
                   0,
-                  -7.7382364273071289,
-                  5.9346575736999512,
-                  -0.14912307262420654,
+                  2.9653682708740234,
+                  1.271736741065979,
+                  5.1169910430908203,
                   1
                 ],
                 "sceneTransform" : [

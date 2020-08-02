@@ -48,16 +48,16 @@ class ArViewController: UIViewController {
             print("You hit: ", hitEntity.anchor!.debugDescription.utf8CString)
         }
         chestModel.actions.chestCollected.onAction = { [weak self] box in
+            self?.viewModel.saveChest()
             self?.dismiss(animated: true)
         }
     }
-    
     
     func setupCountdown() {
         countdown.isHidden = false
         viewModel.timer = Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
             .map { time in
-                "\(10 - (time + 1)) s" }
+                "\(10 - (time % 10 + 1)) s" }
             .bind(to: countdown.rx.text)
             .dispose(by: viewModel.disposeBag)
     }

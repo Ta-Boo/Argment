@@ -10,9 +10,14 @@
 		7631BF40E7EDCA9D6CFD9C45 /* libPods-Argment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F41D9D329EE6E9EC2F21965 /* libPods-Argment.a */; };
 		B3290E4B24C76EFD0094161A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3290E4A24C76EFD0094161A /* GoogleService-Info.plist */; };
 		B3290E4D24C7901D0094161A /* UIImage+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3290E4C24C7901D0094161A /* UIImage+Assets.swift */; };
+		B3290E5124C798090094161A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3290E5024C798090094161A /* UIColor.swift */; };
+		B37C19D024C8E6F2000E6EC2 /* RadialGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C19CF24C8E6F2000E6EC2 /* RadialGradient.swift */; };
+		B37C19D224C902E4000E6EC2 /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C19D124C902E4000E6EC2 /* Any.swift */; };
 		B388C37B24C4F4BD002F0B66 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B388C37A24C4F4BD002F0B66 /* UIControl.swift */; };
 		B388C37D24C6263D002F0B66 /* SSYBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B388C37C24C6263D002F0B66 /* SSYBox.swift */; };
 		B388C38224C64A84002F0B66 /* ChestModel.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B388C38124C64A84002F0B66 /* ChestModel.rcproject */; };
+		B39FA55324D6DD8800738EF3 /* SSYDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39FA55224D6DD8800738EF3 /* SSYDialogController.swift */; };
+		B39FA55624D7624400738EF3 /* chest_opening.json in Resources */ = {isa = PBXBuildFile; fileRef = B39FA55524D7624300738EF3 /* chest_opening.json */; };
 		B3AE5B6D24C1C319007D4D48 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE5B6C24C1C319007D4D48 /* AppState.swift */; };
 		B3AE5B7224C1C38C007D4D48 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AE5B7124C1C38C007D4D48 /* MainTabBar.storyboard */; };
 		B3AE5B7424C1C3DC007D4D48 /* ArgmentTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE5B7324C1C3DC007D4D48 /* ArgmentTabBar.swift */; };
@@ -22,9 +27,9 @@
 		B3AE5B8124C1E974007D4D48 /* Stats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AE5B8024C1E974007D4D48 /* Stats.storyboard */; };
 		B3B5C0F624C2F0300073406F /* ArViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0F524C2F0300073406F /* ArViewModel.swift */; };
 		B3B5C0F824C2F7700073406F /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0F724C2F7700073406F /* Rx.swift */; };
-		B3B5C0FA24C3A8900073406F /* Treasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0F924C3A8900073406F /* Treasure.swift */; };
-		B3B5C0FC24C3AE510073406F /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0FB24C3AE510073406F /* StatsViewModel.swift */; };
-		B3B5C10024C3B1BB0073406F /* TreasureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0FF24C3B1BB0073406F /* TreasureCell.swift */; };
+		B3B5C0FA24C3A8900073406F /* Chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0F924C3A8900073406F /* Chest.swift */; };
+		B3B5C0FC24C3AE510073406F /* LootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0FB24C3AE510073406F /* LootViewModel.swift */; };
+		B3B5C10024C3B1BB0073406F /* LootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B5C0FF24C3B1BB0073406F /* LootCell.swift */; };
 		B3C3565B24BF73D000ADF909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3565A24BF73D000ADF909 /* AppDelegate.swift */; };
 		B3C3566424BF73D200ADF909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C3566324BF73D200ADF909 /* Assets.xcassets */; };
 		B3C3566724BF73D200ADF909 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C3566524BF73D200ADF909 /* LaunchScreen.storyboard */; };
@@ -58,9 +63,14 @@
 		B2AC6EECD837088602F39D76 /* Pods-Argment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Argment.debug.xcconfig"; path = "Target Support Files/Pods-Argment/Pods-Argment.debug.xcconfig"; sourceTree = "<group>"; };
 		B3290E4A24C76EFD0094161A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B3290E4C24C7901D0094161A /* UIImage+Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Assets.swift"; sourceTree = "<group>"; };
+		B3290E5024C798090094161A /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B37C19CF24C8E6F2000E6EC2 /* RadialGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradient.swift; sourceTree = "<group>"; };
+		B37C19D124C902E4000E6EC2 /* Any.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Any.swift; sourceTree = "<group>"; };
 		B388C37A24C4F4BD002F0B66 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		B388C37C24C6263D002F0B66 /* SSYBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSYBox.swift; sourceTree = "<group>"; };
 		B388C38124C64A84002F0B66 /* ChestModel.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = ChestModel.rcproject; sourceTree = "<group>"; };
+		B39FA55224D6DD8800738EF3 /* SSYDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSYDialogController.swift; sourceTree = "<group>"; };
+		B39FA55524D7624300738EF3 /* chest_opening.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = chest_opening.json; path = ../../../../../Downloads/chest_opening.json; sourceTree = "<group>"; };
 		B3AE5B6C24C1C319007D4D48 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B3AE5B7124C1C38C007D4D48 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		B3AE5B7324C1C3DC007D4D48 /* ArgmentTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgmentTabBar.swift; sourceTree = "<group>"; };
@@ -70,9 +80,9 @@
 		B3AE5B8024C1E974007D4D48 /* Stats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stats.storyboard; sourceTree = "<group>"; };
 		B3B5C0F524C2F0300073406F /* ArViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArViewModel.swift; sourceTree = "<group>"; };
 		B3B5C0F724C2F7700073406F /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
-		B3B5C0F924C3A8900073406F /* Treasure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treasure.swift; sourceTree = "<group>"; };
-		B3B5C0FB24C3AE510073406F /* StatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewModel.swift; sourceTree = "<group>"; };
-		B3B5C0FF24C3B1BB0073406F /* TreasureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureCell.swift; sourceTree = "<group>"; };
+		B3B5C0F924C3A8900073406F /* Chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chest.swift; sourceTree = "<group>"; };
+		B3B5C0FB24C3AE510073406F /* LootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootViewModel.swift; sourceTree = "<group>"; };
+		B3B5C0FF24C3B1BB0073406F /* LootCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootCell.swift; sourceTree = "<group>"; };
 		B3C3565724BF73D000ADF909 /* Argment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Argment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C3565A24BF73D000ADF909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3C3566324BF73D200ADF909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,12 +152,37 @@
 			path = Boot;
 			sourceTree = "<group>";
 		};
+		B37C19CE24C8E6E1000E6EC2 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				B3AE5B7324C1C3DC007D4D48 /* ArgmentTabBar.swift */,
+				B37C19CF24C8E6F2000E6EC2 /* RadialGradient.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
 		B388C37E24C64995002F0B66 /* ArModels */ = {
 			isa = PBXGroup;
 			children = (
 				B388C38124C64A84002F0B66 /* ChestModel.rcproject */,
 			);
 			path = ArModels;
+			sourceTree = "<group>";
+		};
+		B39FA54F24D6DC4500738EF3 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				B39FA55224D6DD8800738EF3 /* SSYDialogController.swift */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		B39FA55424D7622000738EF3 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B39FA55524D7624300738EF3 /* chest_opening.json */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		B3AE5B6924C1C1C1007D4D48 /* Screens */ = {
@@ -162,6 +197,7 @@
 		B3AE5B6A24C1C2BC007D4D48 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				B39FA54F24D6DC4500738EF3 /* Dialog */,
 				B3AE5B7D24C1E939007D4D48 /* Loot */,
 				B3AE5B6E24C1C35E007D4D48 /* Ar */,
 			);
@@ -191,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				B3AE5B7124C1C38C007D4D48 /* MainTabBar.storyboard */,
-				B3AE5B7324C1C3DC007D4D48 /* ArgmentTabBar.swift */,
 				B3AE5B7524C1CB3F007D4D48 /* MainTabBarController.swift */,
 			);
 			path = MainTabBar;
@@ -200,6 +235,7 @@
 		B3AE5B7724C1D13C007D4D48 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B39FA55424D7622000738EF3 /* Animations */,
 				B3C3566324BF73D200ADF909 /* Assets.xcassets */,
 				B388C37E24C64995002F0B66 /* ArModels */,
 				B3AE5B7824C1D30B007D4D48 /* Generated */,
@@ -220,9 +256,9 @@
 			isa = PBXGroup;
 			children = (
 				B3AE5B7E24C1E950007D4D48 /* LootViewController.swift */,
-				B3B5C0F924C3A8900073406F /* Treasure.swift */,
-				B3B5C0FB24C3AE510073406F /* StatsViewModel.swift */,
-				B3B5C0FF24C3B1BB0073406F /* TreasureCell.swift */,
+				B3B5C0FB24C3AE510073406F /* LootViewModel.swift */,
+				B3B5C0F924C3A8900073406F /* Chest.swift */,
+				B3B5C0FF24C3B1BB0073406F /* LootCell.swift */,
 				B3AE5B8024C1E974007D4D48 /* Stats.storyboard */,
 			);
 			path = Loot;
@@ -284,9 +320,12 @@
 		B3C3569024BF82A000ADF909 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B37C19CE24C8E6E1000E6EC2 /* CustomUI */,
 				B3C3569124BF82B600ADF909 /* ARView.swift */,
 				B3B5C0F724C2F7700073406F /* Rx.swift */,
 				B388C37A24C4F4BD002F0B66 /* UIControl.swift */,
+				B3290E5024C798090094161A /* UIColor.swift */,
+				B37C19D124C902E4000E6EC2 /* Any.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,6 +435,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39FA55624D7624400738EF3 /* chest_opening.json in Resources */,
 				B3AE5B8124C1E974007D4D48 /* Stats.storyboard in Resources */,
 				B3C3566724BF73D200ADF909 /* LaunchScreen.storyboard in Resources */,
 				B3AE5B7224C1C38C007D4D48 /* MainTabBar.storyboard in Resources */,
@@ -458,12 +498,16 @@
 				B388C38224C64A84002F0B66 /* ChestModel.rcproject in Sources */,
 				B3AE5B7C24C1D374007D4D48 /* StoryboardScenes.swift in Sources */,
 				B3AE5B6D24C1C319007D4D48 /* AppState.swift in Sources */,
-				B3B5C0FA24C3A8900073406F /* Treasure.swift in Sources */,
+				B3B5C0FA24C3A8900073406F /* Chest.swift in Sources */,
+				B37C19D224C902E4000E6EC2 /* Any.swift in Sources */,
 				B3AE5B7624C1CB3F007D4D48 /* MainTabBarController.swift in Sources */,
-				B3B5C10024C3B1BB0073406F /* TreasureCell.swift in Sources */,
+				B3B5C10024C3B1BB0073406F /* LootCell.swift in Sources */,
+				B37C19D024C8E6F2000E6EC2 /* RadialGradient.swift in Sources */,
 				B3B5C0F824C2F7700073406F /* Rx.swift in Sources */,
 				B3B5C0F624C2F0300073406F /* ArViewModel.swift in Sources */,
-				B3B5C0FC24C3AE510073406F /* StatsViewModel.swift in Sources */,
+				B3B5C0FC24C3AE510073406F /* LootViewModel.swift in Sources */,
+				B3290E5124C798090094161A /* UIColor.swift in Sources */,
+				B39FA55324D6DD8800738EF3 /* SSYDialogController.swift in Sources */,
 				B3C3565B24BF73D000ADF909 /* AppDelegate.swift in Sources */,
 				B3AE5B7F24C1E950007D4D48 /* LootViewController.swift in Sources */,
 				B3290E4D24C7901D0094161A /* UIImage+Assets.swift in Sources */,

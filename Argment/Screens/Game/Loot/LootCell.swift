@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TreasureCell: UITableViewCell {
+class LootCell: UITableViewCell {
     let foodImage: UIImageView = {
         let img = UIImageView()
         img.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
@@ -37,17 +37,31 @@ class TreasureCell: UITableViewCell {
         return view
     }()
     
+    let selectorView: UIView = {
+        let imageView = UIImageView()
+        imageView.image = .selection
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.isHidden = true
+        return imageView
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupCell()
         
     }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        selectorView.isHidden = !selected
+    }
     
     private func setupCell() {
         contentView.addSubview(container)
-        for view in [foodImage, nameLabel] {
+        for view in [foodImage, nameLabel, selectorView] {
             container.addSubview(view)
         }
+        selectorView.frame = container.bounds
         NSLayoutConstraint.activate([
             container.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
             container.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
@@ -63,6 +77,12 @@ class TreasureCell: UITableViewCell {
             nameLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -24),
             nameLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 6),
             nameLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -6),
+            
+            
+            selectorView.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+            selectorView.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+            selectorView.topAnchor.constraint(equalTo: container.topAnchor),
+            selectorView.bottomAnchor.constraint(equalTo: container.bottomAnchor),
     
             contentView.heightAnchor.constraint(equalToConstant: 132)
         ])
@@ -75,7 +95,7 @@ class TreasureCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
-    func load(data: Treasure) {
+    func load(data: Chest) {
         foodImage.image = data.image
         nameLabel.text = data.description
         container.backgroundColor =  data.color
