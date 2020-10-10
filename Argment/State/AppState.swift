@@ -15,14 +15,10 @@ class AppState {
     func loadData() {
         let data = [
             Chest(rarity: .common),
-            Chest(rarity: .common),
-            Chest(rarity: .rare),
-            Chest(rarity: .common),
             Chest(rarity: .rare),
             Chest(rarity: .common),
             Chest(rarity: .common),
-            Chest(rarity: .legendary),
-            Chest(rarity: .common)
+            Chest(rarity: .legendary)
         ]
         loot.accept(data)
     }

@@ -12,6 +12,9 @@ import UIKit.UIImage
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public extension UIImage {
+  static let commonChest = UIImage.bundledImage(with: "common_chest")
+  static let legendaryChest = UIImage.bundledImage(with: "legendary_chest")
+  static let rareChest = UIImage.bundledImage(with: "rare_chest")
   static let animal = UIImage.bundledImage(with: "animal")
   static let info = UIImage.bundledImage(with: "info")
   static let settings = UIImage.bundledImage(with: "settings")

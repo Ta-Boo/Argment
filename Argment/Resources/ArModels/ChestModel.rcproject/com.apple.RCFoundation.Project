@@ -31,9 +31,9 @@
                                     {
                                       "configurationBox" : {
                                         "configuration" : {
-                                          "animationStyle" : "basic",
-                                          "duration" : 3,
-                                          "emphasisAnimationType" : "float",
+                                          "animationStyle" : "wild",
+                                          "duration" : 1,
+                                          "emphasisAnimationType" : "spin",
                                           "iterations" : 1,
                                           "target" : [
                                             "E67B41C7-7371-44FD-BC85-874E79B1B142"
@@ -44,6 +44,33 @@
                                         }
                                       },
                                       "identifier" : "F7CE9AD6-85FF-445D-B422-162F76E5739B",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                },
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "angularCoefficient" : 1,
+                                          "duration" : 1,
+                                          "isTransformInitKeyPath" : true,
+                                          "linearCoefficient" : 1,
+                                          "moveEase" : "none",
+                                          "respectPhysics" : false,
+                                          "scale" : 0.004999999888241291,
+                                          "target" : [
+                                            "E67B41C7-7371-44FD-BC85-874E79B1B142"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "arguments" : "absolute",
+                                          "type" : "transform"
+                                        }
+                                      },
+                                      "identifier" : "04EF781E-752A-449C-9244-99E7648BEDC0",
                                       "isEnabled" : true
                                     }
                                   ],
@@ -66,48 +93,10 @@
                                       "configurationBox" : {
                                         "configuration" : {
                                           "angularCoefficient" : 1,
-                                          "duration" : 0.30000001192092896,
-                                          "isTransformInitKeyPath" : true,
-                                          "linearCoefficient" : 1,
-                                          "moveEase" : "none",
-                                          "respectPhysics" : false,
-                                          "scale" : 0.004999999888241291,
-                                          "target" : [
-                                            "E67B41C7-7371-44FD-BC85-874E79B1B142"
-                                          ]
-                                        },
-                                        "name" : {
-                                          "arguments" : "absolute",
-                                          "type" : "transform"
-                                        }
-                                      },
-                                      "identifier" : "04EF781E-752A-449C-9244-99E7648BEDC0",
-                                      "isEnabled" : true
-                                    }
-                                  ],
-                                  "__version" : 1
-                                }
-                              ],
-                              "identifier" : "CF41503F-C017-4646-AF87-9CFE4C38E89B",
-                              "isEnabled" : true
-                            }
-                          ],
-                          "__version" : 1
-                        },
-                        {
-                          "__content" : [
-                            {
-                              "configurations" : [
-                                {
-                                  "__content" : [
-                                    {
-                                      "configurationBox" : {
-                                        "configuration" : {
-                                          "angularCoefficient" : 1,
                                           "animationStyle" : "basic",
                                           "buildOutAnimationType" : "scale down",
                                           "distance" : 1,
-                                          "duration" : 1,
+                                          "duration" : 0,
                                           "fadeOut" : true,
                                           "linearCoefficient" : 1,
                                           "moveEase" : "easeInOut",
@@ -128,34 +117,6 @@
                                 }
                               ],
                               "identifier" : "CEA9E528-3440-43DD-BC9F-95943A96DBB2",
-                              "isEnabled" : true
-                            }
-                          ],
-                          "__version" : 1
-                        },
-                        {
-                          "__content" : [
-                            {
-                              "configurations" : [
-                                {
-                                  "__content" : [
-                                    {
-                                      "configurationBox" : {
-                                        "configuration" : {
-                                          "duration" : 0.5
-                                        },
-                                        "name" : {
-                                          "type" : "wait"
-                                        }
-                                      },
-                                      "identifier" : "A15A92C8-4350-46F3-A589-9C8D8E58D3C7",
-                                      "isEnabled" : true
-                                    }
-                                  ],
-                                  "__version" : 1
-                                }
-                              ],
-                              "identifier" : "6EFA0CD7-5D70-4AB6-864B-0F3B82178D4E",
                               "isEnabled" : true
                             }
                           ],
@@ -326,21 +287,21 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        4.0098213503370062e-05,
+                        2.7600257453741506e-05,
                         0,
-                        -0.11584918200969696,
-                        0,
-                        0,
-                        0.11584921926259995,
+                        -0.079740904271602631,
                         0,
                         0,
-                        0.11584918200969696,
+                        0.079740911722183228,
                         0,
-                        4.0098213503370062e-05,
                         0,
-                        0.16524273157119751,
-                        0.19346602261066437,
-                        0.099690437316894531,
+                        0.079740904271602631,
+                        0,
+                        2.7600257453741506e-05,
+                        0,
+                        0,
+                        0.13316579163074493,
+                        0,
                         1
                       ]
                     }

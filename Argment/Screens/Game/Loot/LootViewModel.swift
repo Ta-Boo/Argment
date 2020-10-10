@@ -12,13 +12,13 @@ import RxCocoa
 
 class LootViewModel{
     let disposeBag = DisposeBag()
-    let items: BehaviorRelay<[Chest]> = BehaviorRelay(value: [])
+//    let items: BehaviorRelay<[Chest]> = BehaviorRelay(value: [])
     
-    func fetchData() {
-        items.accept(AppState.shared.loot.value)
-    }
+//    func fetchData() {
+//        items.accept(AppState.shared.loot.value)
+//    }
     
-    func update() {
-        fetchData()
-    }
+//    func update() {
+//        fetchData()
+//    }
 }

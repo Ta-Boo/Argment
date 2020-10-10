@@ -43,33 +43,30 @@ class LootViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.update()
+//        viewModel.update()
     }
     
     func bindTableView(){
         tableView.register(LootCell.self, forCellReuseIdentifier: "cellId")
         
-        viewModel.items.subscribe(onNext: { [weak self] chests in
+        AppState.shared.loot.subscribe(onNext: { [weak self] chests in
             self?.noDataImageView.isHidden = !chests.isEmpty
         }).disposed(by: viewModel.disposeBag)
-        viewModel.items.bind(to: tableView.rx.items(cellIdentifier: "cellId", cellType: LootCell.self)) { (row,item,cell) in
+        
+        AppState.shared.loot.bind(to: tableView.rx.items(cellIdentifier: "cellId", cellType: LootCell.self)) { [] (row,item,cell) in
             cell.load(data: item)
         }.disposed(by: viewModel.disposeBag)
         
         tableView.rx.modelSelected(Chest.self).subscribe(onNext: { [weak self] item in
-            let alert = SSYDialogController()
-//            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            let alert = SSYDialogController(title: "You are about to open chest", message: "\(item.description)", animation: "chest_opening")
+            alert.addAction(SSYDialogAction(title: "OK", style: .basic, action: {
+                AppState.shared.loot.accept(AppState.shared.loot.value.filter{ $0 != item})
+            }))
+            alert.addAction(SSYDialogAction(title: "Cancel", style: .destructive))
             self?.present(alert, animated: true)
         }).disposed(by: viewModel.disposeBag)
         
-        tableView.rx.itemSelected.subscribe(onNext: { [weak self] index in
-            guard let cell = self?.tableView.cellForRow(at: index) else { return }
-            let backgroundView = UIView()
-            backgroundView.backgroundColor = UIColor.init(named: "Secondary")
-            cell.selectedBackgroundView = backgroundView
-        }).disposed(by: viewModel.disposeBag)
         
-        viewModel.fetchData()
     }
 }
 

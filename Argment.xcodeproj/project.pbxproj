@@ -11,13 +11,14 @@
 		B3290E4B24C76EFD0094161A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3290E4A24C76EFD0094161A /* GoogleService-Info.plist */; };
 		B3290E4D24C7901D0094161A /* UIImage+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3290E4C24C7901D0094161A /* UIImage+Assets.swift */; };
 		B3290E5124C798090094161A /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3290E5024C798090094161A /* UIColor.swift */; };
+		B3565DF924D9B776006E19DE /* chest_found.json in Resources */ = {isa = PBXBuildFile; fileRef = B3565DF824D9B776006E19DE /* chest_found.json */; };
 		B37C19D024C8E6F2000E6EC2 /* RadialGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C19CF24C8E6F2000E6EC2 /* RadialGradient.swift */; };
 		B37C19D224C902E4000E6EC2 /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37C19D124C902E4000E6EC2 /* Any.swift */; };
 		B388C37B24C4F4BD002F0B66 /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B388C37A24C4F4BD002F0B66 /* UIControl.swift */; };
 		B388C37D24C6263D002F0B66 /* SSYBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B388C37C24C6263D002F0B66 /* SSYBox.swift */; };
 		B388C38224C64A84002F0B66 /* ChestModel.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B388C38124C64A84002F0B66 /* ChestModel.rcproject */; };
 		B39FA55324D6DD8800738EF3 /* SSYDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39FA55224D6DD8800738EF3 /* SSYDialogController.swift */; };
-		B39FA55624D7624400738EF3 /* chest_opening.json in Resources */ = {isa = PBXBuildFile; fileRef = B39FA55524D7624300738EF3 /* chest_opening.json */; };
+		B39FA55824D8D0C000738EF3 /* chest_opening.json in Resources */ = {isa = PBXBuildFile; fileRef = B39FA55724D8D0BF00738EF3 /* chest_opening.json */; };
 		B3AE5B6D24C1C319007D4D48 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE5B6C24C1C319007D4D48 /* AppState.swift */; };
 		B3AE5B7224C1C38C007D4D48 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AE5B7124C1C38C007D4D48 /* MainTabBar.storyboard */; };
 		B3AE5B7424C1C3DC007D4D48 /* ArgmentTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE5B7324C1C3DC007D4D48 /* ArgmentTabBar.swift */; };
@@ -64,13 +65,14 @@
 		B3290E4A24C76EFD0094161A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B3290E4C24C7901D0094161A /* UIImage+Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Assets.swift"; sourceTree = "<group>"; };
 		B3290E5024C798090094161A /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B3565DF824D9B776006E19DE /* chest_found.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chest_found.json; sourceTree = "<group>"; };
 		B37C19CF24C8E6F2000E6EC2 /* RadialGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradient.swift; sourceTree = "<group>"; };
 		B37C19D124C902E4000E6EC2 /* Any.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Any.swift; sourceTree = "<group>"; };
 		B388C37A24C4F4BD002F0B66 /* UIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		B388C37C24C6263D002F0B66 /* SSYBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSYBox.swift; sourceTree = "<group>"; };
 		B388C38124C64A84002F0B66 /* ChestModel.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = ChestModel.rcproject; sourceTree = "<group>"; };
 		B39FA55224D6DD8800738EF3 /* SSYDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSYDialogController.swift; sourceTree = "<group>"; };
-		B39FA55524D7624300738EF3 /* chest_opening.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = chest_opening.json; path = ../../../../../Downloads/chest_opening.json; sourceTree = "<group>"; };
+		B39FA55724D8D0BF00738EF3 /* chest_opening.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chest_opening.json; sourceTree = "<group>"; };
 		B3AE5B6C24C1C319007D4D48 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		B3AE5B7124C1C38C007D4D48 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		B3AE5B7324C1C3DC007D4D48 /* ArgmentTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgmentTabBar.swift; sourceTree = "<group>"; };
@@ -180,7 +182,8 @@
 		B39FA55424D7622000738EF3 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				B39FA55524D7624300738EF3 /* chest_opening.json */,
+				B3565DF824D9B776006E19DE /* chest_found.json */,
+				B39FA55724D8D0BF00738EF3 /* chest_opening.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 		B3AE5B6924C1C1C1007D4D48 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B39FA54F24D6DC4500738EF3 /* Dialog */,
 				B3AE5B7024C1C373007D4D48 /* MainTabBar */,
 				B3AE5B6A24C1C2BC007D4D48 /* Game */,
 			);
@@ -197,7 +201,6 @@
 		B3AE5B6A24C1C2BC007D4D48 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				B39FA54F24D6DC4500738EF3 /* Dialog */,
 				B3AE5B7D24C1E939007D4D48 /* Loot */,
 				B3AE5B6E24C1C35E007D4D48 /* Ar */,
 			);
@@ -435,8 +438,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B39FA55624D7624400738EF3 /* chest_opening.json in Resources */,
+				B39FA55824D8D0C000738EF3 /* chest_opening.json in Resources */,
 				B3AE5B8124C1E974007D4D48 /* Stats.storyboard in Resources */,
+				B3565DF924D9B776006E19DE /* chest_found.json in Resources */,
 				B3C3566724BF73D200ADF909 /* LaunchScreen.storyboard in Resources */,
 				B3AE5B7224C1C38C007D4D48 /* MainTabBar.storyboard in Resources */,
 				B3C3566424BF73D200ADF909 /* Assets.xcassets in Resources */,

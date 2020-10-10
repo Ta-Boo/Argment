@@ -12,20 +12,30 @@ import UIKit
 class LootCell: UITableViewCell {
     let foodImage: UIImageView = {
         let img = UIImageView()
-        img.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
+        img.contentMode = .scaleAspectFit // image will never be strecthed vertially or horizontally
         img.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
-        img.layer.cornerRadius = 35
         img.clipsToBounds = true
         return img
     }()
     
-    let nameLabel: UILabel = {
+    let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.numberOfLines = 0
-        label.textColor =  .black
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+    
+    let subtitleLabel: UITextView = {
+        let textView = UITextView()
+        textView.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        textView.textColor = .lightText
+        textView.isUserInteractionEnabled = false
+        textView.textContainer.maximumNumberOfLines = 3
+        textView.backgroundColor = .none
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        return textView
     }()
     
     let container: UIView = {
@@ -38,30 +48,24 @@ class LootCell: UITableViewCell {
     }()
     
     let selectorView: UIView = {
-        let imageView = UIImageView()
-        imageView.image = .selection
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
-        imageView.isHidden = true
-        return imageView
-    }()
+           let imageView = UIImageView()
+           imageView.image = .selection
+           imageView.contentMode = .scaleAspectFit
+           imageView.isHidden = true
+           return imageView
+       }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupCell()
-        
+        selectedBackgroundView = nil
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        selectorView.isHidden = !selected
-    }
-    
     private func setupCell() {
         contentView.addSubview(container)
-        for view in [foodImage, nameLabel, selectorView] {
+        for view in [foodImage, titleLabel, subtitleLabel] {
             container.addSubview(view)
         }
-        selectorView.frame = container.bounds
         NSLayoutConstraint.activate([
             container.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
             container.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
@@ -70,20 +74,19 @@ class LootCell: UITableViewCell {
             
             foodImage.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 22),
             foodImage.centerYAnchor.constraint(equalTo: container.centerYAnchor, constant: 6),
-            foodImage.widthAnchor.constraint(equalToConstant: 72),
+            foodImage.widthAnchor.constraint(equalToConstant: 96),
             foodImage.heightAnchor.constraint(equalToConstant: 72),
             
-            nameLabel.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 24),
-            nameLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -24),
-            nameLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 6),
-            nameLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -6),
+            titleLabel.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 12),
+            titleLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -24),
+            titleLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 6),
+            titleLabel.heightAnchor.constraint(equalToConstant: 22),
             
-            
-            selectorView.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            selectorView.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            selectorView.topAnchor.constraint(equalTo: container.topAnchor),
-            selectorView.bottomAnchor.constraint(equalTo: container.bottomAnchor),
-    
+            subtitleLabel.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 20),
+            subtitleLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -24),
+            subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 0),
+            subtitleLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -8),
+
             contentView.heightAnchor.constraint(equalToConstant: 132)
         ])
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40))
@@ -97,7 +100,8 @@ class LootCell: UITableViewCell {
     
     func load(data: Chest) {
         foodImage.image = data.image
-        nameLabel.text = data.description
-        container.backgroundColor =  data.color
+        titleLabel.text = data.title
+        subtitleLabel.text = data.description
+        container.backgroundColor = data.color
     }
 }

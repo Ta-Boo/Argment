@@ -2,10 +2,6 @@ import Foundation
 import RealityKit
 import ARKit
 
-//protocol ArViewCompletion: ARView {
-//    var detectionCompleted: (() -> Void)?  {get set}
-//}
-
 extension ARView: ARCoachingOverlayViewDelegate{
     func addCoaching() {
         
@@ -28,6 +24,3 @@ final class MyArView: ARView {
         detectionCompletedClosure?()
     }
 }
-
-
-

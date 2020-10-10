@@ -45,11 +45,19 @@ class ArViewController: UIViewController {
                     print("You missed")
                     return
             }
-            print("You hit: ", hitEntity.anchor!.debugDescription.utf8CString)
         }
         chestModel.actions.chestCollected.onAction = { [weak self] box in
-            self?.viewModel.saveChest()
-            self?.dismiss(animated: true)
+            guard let self = self else{
+                return
+            }
+            
+            let alert = SSYDialogController(title: "You have found: \(self.viewModel.chest.title.lowercased()) ", message: "\(self.viewModel.chest.description)", animation: "chest_found")
+            alert.addAction(SSYDialogAction(title: "OK", style: .basic, action: {
+                self.viewModel.saveChest()
+                self.dismiss(animated: true)
+            }))
+            self.present(alert, animated: true)
+
         }
     }
     
